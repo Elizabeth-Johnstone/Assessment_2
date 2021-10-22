@@ -21,10 +21,7 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
-
-
-
+// ANSWER // const greetUser = (username) => `Welcome back, ${username}`
 
 
 //////////////////PROBLEM 2////////////////////
@@ -46,11 +43,17 @@
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
 */
+// // // ANSWER //
+// const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
-
-//CODE HERE
-
+// const canWeDeliver = (zipCode) => {
+//     if (deliveryAreaZipCodes.includes(zipCode)) {
+//         return `You're in our delivery zone!`
+//     } else {
+//         return `Sorry, we can't deliver to that address`
+//     }
+// }
+// // // ANSWER //
 
 
 /* 
@@ -70,22 +73,27 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+// ANSWER //
+// const canWeDeliverTwo = (zipCode) => {
+//     let arrayOfZipCode = []
+//     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+//         if (deliveryAreaZipCodes[i] === zipCode) {
+//             let newArray = arrayOfZipCode.push(deliveryAreaZipCodes[i])
+//             if (newArray !== undefined) {
+//                 return `You're in our delivery zone!`            
+//             }          
+//     }
+//     return `Sorry, we can't deliver to that address`
+// }
+// }
+// ANSWER //
 
 
 //////////////////PROBLEM 3////////////////////
 /* 
-    Below is an array of objects that have some
-    information about a couple of deals that are
-    available at the restaurant currently. 
-
-    You are going to access the object's properties 
-    and change some values. Don't edit the array 
-    directly, let's use the `replace` method.
-
-    Read on for more instructions.
-*/
-
+Below is an array of objects that have some information about a couple of deals that are available at the restaurant currently. 
+You are going to access the object's properties and change some values. Don't edit the array directly, let's use the `replace` method.
+// */
 const deals = [
     {
         title: '15% Off!', 
@@ -96,19 +104,30 @@ const deals = [
         desc: '   This deal lasts until the end of March! '
     }
 ]
+// /*
+// The owner has decided to take the 15% off deal down to 10%.
+// Reassign the value of the first deal's title to be itself, but use the `replace` method to replace the 15 with a 10.
+// // */
 
-/*
-    The owner has decided to take the 15% off
-    deal down to 10%.
+const newDeal = deals.map(item => item.title)
+// replace('15', '10')
+console.log(newDeal(deals))
 
-    Reassign the value of the first deal's title
-    to be itself, but use the `replace` method
-    to replace the 15 with a 10.
-*/
+// //let dealsTwo = deals.toString()
+// let array = []
+// let newArray = array.push(deals.title)
 
-//CODE HERE
+// //replace('15', '10')
+
+// console.log(newArray)
+
+// const shortStory = ['Once upon a time, there was a dragon. He was awesome. The end.']
+// let newArray = shortStory.toString()
+// const noFirstE = newArray.replace('e', 'x')
+// console.log(noFirstE)
 
 
+// console.log(noFirstE) // Oncx upon a time, there was a dragon. He was awesome. The end.
 
 /*
     The restaurant is going to continue its
