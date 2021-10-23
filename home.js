@@ -21,7 +21,7 @@
     'Welcome back, Andrew'
 */
 
-// ANSWER // const greetUser = (username) => `Welcome back, ${username}`
+const greetUser = (username) => `Welcome back, ${username}`
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,17 +43,17 @@
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
 */
-// // // ANSWER //
-// const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-// const canWeDeliver = (zipCode) => {
-//     if (deliveryAreaZipCodes.includes(zipCode)) {
-//         return `You're in our delivery zone!`
-//     } else {
-//         return `Sorry, we can't deliver to that address`
-//     }
-// }
-// // // ANSWER //
+const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+
+const canWeDeliver = (zipCode) => {
+    if (deliveryAreaZipCodes.includes(zipCode)) {
+        return `You're in our delivery zone!`
+    } else {
+        return `Sorry, we can't deliver to that address`
+    }
+}
+
 
 
 /* 
@@ -73,20 +73,20 @@
     Name your new function `canWeDeliverTwo`.
 */
 
-// ANSWER //
-// const canWeDeliverTwo = (zipCode) => {
-//     let arrayOfZipCode = []
-//     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-//         if (deliveryAreaZipCodes[i] === zipCode) {
-//             let newArray = arrayOfZipCode.push(deliveryAreaZipCodes[i])
-//             if (newArray !== undefined) {
-//                 return `You're in our delivery zone!`            
-//             }          
-//     }
-//     return `Sorry, we can't deliver to that address`
-// }
-// }
-// ANSWER //
+
+const canWeDeliverTwo = (zipCode) => {
+    let arrayOfZipCode = []
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (deliveryAreaZipCodes[i] === zipCode) {
+            let newArray = arrayOfZipCode.push(deliveryAreaZipCodes[i])
+            if (newArray !== undefined) {
+                return `You're in our delivery zone!`            
+            }          
+    }
+    return `Sorry, we can't deliver to that address`
+}
+}
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -109,37 +109,19 @@ const deals = [
 // Reassign the value of the first deal's title to be itself, but use the `replace` method to replace the 15 with a 10.
 // // */
 
-const newDeal = deals.map(item => item.title)
-// replace('15', '10')
-console.log(newDeal(deals))
+let firstDeal = deals[0].title
+let newDeal = firstDeal.replace('15', '10')
 
-// //let dealsTwo = deals.toString()
-// let array = []
-// let newArray = array.push(deals.title)
-
-// //replace('15', '10')
-
-// console.log(newArray)
-
-// const shortStory = ['Once upon a time, there was a dragon. He was awesome. The end.']
-// let newArray = shortStory.toString()
-// const noFirstE = newArray.replace('e', 'x')
-// console.log(noFirstE)
-
-
-// console.log(noFirstE) // Oncx upon a time, there was a dragon. He was awesome. The end.
+console.log(newDeal)
 
 /*
-    The restaurant is going to continue its
-    family deal for another month. 
-
-    Reassign the value of the second deal's desc
-    to be itself, but use the `replace` method
-    to replace the word March with April.
-
-    You should also make sure that there is no
-    whitespace in this string, since it seems
-    to be displaying wrong on the live site.
+    The restaurant is going to continue its family deal for another month. 
+    Reassign the value of the second deal's desc to be itself, but use the `replace` method to replace the word March with April.
+    You should also make sure that there is no whitespace in this string, since it seems to be displaying wrong on the live site.
 */
 
-//CODE HERE
+let firstOffer = deals[1].desc
+let newOffer = firstOffer.replace('March', 'April')
+
+console.log(newOffer)
+
